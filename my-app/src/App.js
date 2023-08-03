@@ -1,8 +1,8 @@
-import logo from './logo.svg';
+ 
 import './App.css';
-import PageRoutes from './routes/Routes';
-//import PageRoutes from '../src/routes/NavbarRoutes'
-import Navbar from '../src/Componentss/navbar'
+import Navbar from './Componentss/USER/navbar';
+import UserRoutes from './routes/Routes';
+   
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Navbar/>
       <header className="App-header">
 
-       <PageRoutes />
+       <UserRoutes />
         
       </header>
     </div>

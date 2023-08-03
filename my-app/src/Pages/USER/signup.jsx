@@ -28,7 +28,7 @@ export const Signup = () => {
     console.log("in handleSubmitt")
    
     // Make the POST request using Axios
-    await axios.post('http://localhost:80/api/user/signup', formData )
+    await axios.post('https://early-selective-saltopus.glitch.me/api/user/signup', formData )
       .then(response => {
         // Handle success
         console.log('Data uploaded successfully:',response);

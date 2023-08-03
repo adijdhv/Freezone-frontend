@@ -1,39 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { SignUpButton } from './signupButton';
-import { useNavigate } from "react-router-dom"
+ import { useNavigate } from "react-router-dom"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 
 const Navbar = () => {
         const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-       
-
-        // useEffect(() => {
-        //         // This code runs once when the component is mounted (equivalent to componentDidMount)
-        //         // Initialize the state here if needed
-        //         if (userToken) {
-        //                 setIsLoggedIn(true)
-        //         } else {
-        //                 isLoggedIn(false)
-        //         }
-
-        //         // Example: Fetch initial count from an API
-        //         // const initialCount = fetchInitialCountFromAPI();
-        //         // setCount(initialCount);
-        // });
-        // if (!userToken) {
-
+        
         const handleLogin = async () => {
-                console.log("In    login")
-                
                 navigate('/signin') 
                 
-               const L =   localStorage.getItem('LoggedIn') 
-               console.log("L",L)
-               setIsLoggedIn(L)
+               setIsLoggedIn(localStorage.getItem('LoggedIn') )
                 
         }
         const handleSignup = async () => {
@@ -42,6 +20,7 @@ const Navbar = () => {
                  
         }
 
+     
 
         // } else {
         const handleLogout = async () => {
@@ -105,6 +84,7 @@ const Navbar = () => {
                                                                 <button onClick={handleSignup} >Sign Up</button>
 
                                                                 <button onClick={handleLogin} >Sign In</button>
+                                                                 
                                                         </div>
 
                                                 )}

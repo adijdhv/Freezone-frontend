@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../../styles/kycform.css';
-import { fileUpload } from '../../Componentss/KYC/fileupload';
+import { fileUpload } from '../../Componentss/USER/KYC/fileupload';
  
 //import { fileUpload } from './fileupload';
 const KYCForm = () => {
@@ -38,7 +38,7 @@ const KYCForm = () => {
     
     
 
-    await axios.put('http://localhost:80/api/user/kycform', formData,config)
+    await axios.put('https://early-selective-saltopus.glitch.me/api/user/kycform', formData,config)
       .then(response => {
         console.log('Data uploaded successfully:', response);
         navigate('/')

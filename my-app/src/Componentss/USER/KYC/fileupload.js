@@ -14,7 +14,7 @@ export const fileUpload = async (File) => {
                 },
               };
         
-        await axios.put('http://localhost:80/api/user/docUpload', formData,config)
+        await axios.put('https://early-selective-saltopus.glitch.me/api/user/docUpload', formData,config)
                 .then(response => {
                         console.log('Document uploaded successfully:', response);
                         
